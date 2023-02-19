@@ -27,7 +27,7 @@ public class FetchChangelog extends AsyncTask {
             Context applicationContext = UpdatesActivity.getContextExt();
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(applicationContext);
             customURL = prefs.getString(Constants.PREF_CUSTOM_OTA_URL, Constants.OTA_URL);
-            URL url = new URL(String.format(customURL + "/changelogs/%s/%s.txt",
+            URL url = new URL(String.format(customURL + "/changelogs/%s.txt",
                     Utils.getDeviceCodeName(), Constants.fileName));
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();

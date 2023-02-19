@@ -151,7 +151,7 @@ public class Utils {
     }
 
     public static String getServerURL(String customURL) {
-        return String.format(customURL + "/builds/%s.json", SystemProperties.get(Constants.PROP_DEVICE));
+        return String.format(customURL + "/%s.json", SystemProperties.get(Constants.PROP_DEVICE));
     }
 
     public static String getSecurityPatchLevel() {
@@ -173,7 +173,7 @@ public class Utils {
     }
 
     public static String getDownloadWebpageUrl(String customURL, String fileName) {
-        return String.format(customURL + "/changelogs/%s/%s.txt", SystemProperties.get(Constants.PROP_DEVICE), fileName);
+        return String.format(customURL + "/changelogs/%s.txt", SystemProperties.get(Constants.PROP_DEVICE), fileName);
     }
 
     public static void triggerUpdate(Context context, String downloadId) {
